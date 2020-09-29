@@ -1,0 +1,26 @@
+import I18n from '../../i18n/i18n.class';
+
+<div.location__map#location__map></div>
+<div.location__coordinates>
+<if(input.lat.toString().split('.')[0].length === 3)>
+  <p>${I18n.translate('Lat')}: ${input.lat.toString().substring(0,3)}° ${input.lat.toString().substring(4,6)}'</p>
+</if>
+<if(input.lat.toString().split('.')[0].length === 2)>
+  <p>${I18n.translate('Lat')}: ${input.lat.toString().substring(0,2)}° ${input.lat.toString().substring(3,5)}'</p>
+</if>
+<if(input.lat.toString().split('.')[0].length === 1)>
+  <p>${I18n.translate('Lat')}: ${input.lat.toString().substring(0,1)}° ${input.lat.toString().substring(2,4)}'</p>
+</if>
+<if(input.lng.toString().split('.')[0].length === 4)>
+  <p>${I18n.translate('Lng')}: ${input.lng.toString().substring(0,4)}° ${input.lng.toString().substring(5,7)}'</p>
+</if>
+<if(input.lng.toString().split('.')[0].length === 3)>
+  <p>${I18n.translate('Lng')}: ${input.lng.toString().substring(0,3)}° ${input.lng.toString().substring(4,6)}'</p>
+</if>
+<if(input.lng.toString().split('.')[0].length === 2)>
+  <p>${I18n.translate('Lng')}: ${input.lng.toString().substring(0,2)}° ${input.lng.toString().substring(3,5)}'</p>
+</if>
+<if(input.lng.toString().split('.')[0].length === 1)>
+  <p>${I18n.translate('Lng')}: ${input.lng.toString().substring(0,1)}° ${input.lng.toString().substring(2,4)}'</p>
+</if>
+</div>

@@ -1,0 +1,119 @@
+.weather {
+  display: grid;
+  grid-template-columns: 22rem 22rem 27rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  &__location {
+      grid-column: 1/4;
+      font-size: 4.4rem;
+  }
+  &__temp-today {
+    grid-column: 1/3;
+    grid-row: 3/5;
+    text-align: center;
+    font-size: 30.6rem;
+  }
+  &__data {
+    -webkit-transform: translateY(-75%);
+    transform: translateY(-75%);
+  }
+  &__icon {
+    width: 30rem;
+    height: 30rem;
+    transform: translate(-25%, -37%);
+  }
+  &__data>:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+
+}
+.date_time {
+  grid-column: 1/4;
+  margin-top: 1rem;
+  font-size: 2.2rem;
+  text-transform: capitalize;
+  font-weight: 400;
+}
+.forecast {
+  display: grid;
+  margin-right: 5rem;
+  margin-top: -6rem;
+  &__day {
+    grid-column: 1/3;
+    font-size: 2.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  &__temp {
+    font-size: 8rem;
+  }
+  &__icon {
+    width: 8.7rem;
+    height: 8.7rem;
+    transform: translate(-8%, -23%);
+  }
+}
+@media (max-width: 56.25em){
+  .date_time, .weather__location {
+    text-align: center;
+  }
+  .forecast{
+    margin: -5rem 2.5rem 0;
+  }
+  .weather__data {
+    -webkit-transform: translateY(-60%);
+    transform: translateY(-60%);
+  }
+  .weather__icon {
+    transform: translate(-25%, -22%);
+  }
+}
+@media (max-width: 37.5em) {
+  .controls {
+    -webkit-box-pack: center;
+    justify-content: center;
+    &__left-block {
+      -webkit-box-ordinal-group: 2;
+      order: 1;
+      margin: 4rem 5rem 0;
+    }
+    &__right-block {
+      margin: 0 5rem;
+    }
+  }
+  .drop-down-menu {
+    position: relative;
+  }
+  .weather {
+    grid-template-columns: repeat(3, 10rem);
+    -webkit-box-pack: center;
+    justify-content: center;
+    &__temp-today {
+      grid-column: 1/4;
+      font-size: 25.6rem;
+    }
+    &__icon{
+      grid-column: 1/4;
+      margin: 0 auto;
+      -webkit-transform: translate(0, -22%);
+      transform: translate(0, -22%);
+    }
+    &__data {
+      margin-top: 2rem;
+    }
+  }
+  .forecast, .weather__data {
+    grid-column: 1/4;
+    -webkit-box-pack: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .forecast{
+    margin-top: 4rem;
+    -webkit-transform: translateY(-80%);
+    transform: translateY(-80%);
+    &__icon {
+      transform: translate(10%, 0);
+    }
+  }
+}

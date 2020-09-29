@@ -1,0 +1,32 @@
+import I18n from '../../i18n/i18n.class';
+
+<p.weather__location>${input.city}, ${input.country}</p>
+<p.date_time#date_time>${input.dateTime}</p>
+<p.weather__temp-today>${Math.round(input.temp)}</p>
+<img.weather__icon alt="weather" src=`/img/${input.icon}.svg`>
+<div.weather__data>
+    <if(input.lang === 'be')>
+        <div>${I18n.translate(input.weatherID)}</div>
+    </if>
+    <else>
+        <p>${input.description}</p>
+    </else>
+    <p>${input.feels_likeName}: ${Math.round(input.feels_like)}°</p>
+    <p>${input.windName}: ${Math.round(input.wind)} m/s</p>
+    <p>${input.humidityName}: ${Math.round(input.humidity)}%</p>
+</div>
+<div.forecast>
+    <p.forecast__day>${input.firstDay}</p>
+    <p.forecast__temp>${Math.round(input.firstDayTemp)}°</p>
+    <img.forecast__icon alt="weather" src=`/img/${input.firstDayIcon}.svg`/>
+</div>
+<div.forecast>
+    <p.forecast__day>${input.secondDay}</p>
+    <p.forecast__temp>${Math.round(input.secondDayTemp)}°</p>
+    <img.forecast__icon alt="weather" src=`/img/${input.secondDayIcon}.svg`/>
+</div>
+<div.forecast>
+    <p.forecast__day>${input.thirdDay}</p>
+    <p.forecast__temp>${Math.round(input.thirdDayTemp)}°</p>
+    <img.forecast__icon alt="weather" src=`/img/${input.thirdDayIcon}.svg`/>
+</div>

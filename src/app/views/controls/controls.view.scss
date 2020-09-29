@@ -1,0 +1,190 @@
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 4rem 0;
+    &__left-block {
+        display: flex;
+        margin-left: 6vw;
+        margin-right: 2rem;
+    }
+    &__right-block {
+        position: relative;
+        display: flex;
+        margin-right: 6vw;
+        margin-left: 2rem;
+    }
+}
+.button {
+    width: 4.4rem;
+    height: 4.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: .5rem;
+    background: rgba(180,184,187,.7);
+    font-family: inherit;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    transition: all .2s;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    &:hover {
+        background-color: #b4b8bb;
+    }
+    &_update {
+        background: rgba(180,184,187,.7) url(/img/update-button.svg) no-repeat bottom;
+        background-size: 4.4rem;
+    }
+}
+.spinner {
+    width: 2rem;
+    height: 2rem;
+    background: url(/img/spinner.svg) 50% no-repeat;
+}
+.spin-animation{
+    animation: spin .9s ease-in-out;
+}
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.language-menu {
+    position: relative;
+    margin-left: 1rem;
+}
+.drop-down-menu {
+    position: absolute;
+    z-index: 1;
+    max-height: 0;
+    overflow: hidden;
+    -webkit-transition: max-height .6s cubic-bezier(.25,.46,.45,.94),border-radius .2s;
+    transition: max-height .6s cubic-bezier(.25,.46,.45,.94),border-radius .2s;
+    &__face-button {
+        width: 7.1rem;
+        &_open {
+            border-radius: .5rem .5rem 0 0;
+        }
+        &--open {
+            border-radius: .5rem .5rem 0 0;
+        }
+    }
+    &__item {
+        width: 7.1rem;
+        border-radius: 0;
+        cursor: auto;
+        &:hover {
+            background-color:rgba(180,184,187,.7);
+        }
+        &:last-child {
+            border-radius: 0 0 .5rem .5rem;
+        }
+    }
+    &_open {
+        max-height: 20rem;
+        height: auto;
+    }
+}
+.arrow-down {
+    width: 1.3rem;
+    height: 1.3rem;
+    margin-left: 1rem;
+    background: url(/img/arrow-down.svg) 50% no-repeat;
+    &_open{
+        -webkit-transform: scaleY(-1);
+        transform: scaleY(-1);
+    }
+}
+.units {
+    display: flex;
+}
+.button_c {
+    border-radius: 0 .5rem .5rem 0;
+    cursor: auto;
+    &:hover {
+        background-color: rgba(180,184,187,.7);
+    }
+}
+.button_f {
+    margin-left: 1rem;
+    border-radius: .5rem 0 0 .5rem;
+    cursor: auto;
+    &:hover {
+        background-color: rgba(180,184,187,.7);
+    }
+}
+.search-input {
+    width: 27.4rem;
+    height: 4.4rem;
+    border: .1rem solid rgba(180,184,187,.7);
+    border-radius: .5rem 0 0 .5rem;
+    padding: 1.3rem 1.5rem;
+    background: rgba(76,82,85,.7);
+    font-family: inherit;
+    font-size: 1.4rem;
+    color: #fff;
+    &:focus::placeholder{
+        opacity: 0;
+    }
+    &__button {
+        width: 10rem;
+        margin-left: 0;
+        border-radius: 0 .5rem .5rem 0;
+    }
+    &__voice-button {
+        position: absolute;
+        z-index: 1;
+        top: .2rem;
+        right: 10.5rem;
+        width: 3rem;
+        height: 4rem;
+        background: url(/img/microphone.svg) 50% no-repeat;
+        background-size: 50%;
+    }
+    &:required {
+        outline: 0;
+    }
+}
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    display: none;
+}
+input::placeholder {
+    color: #fff;
+}
+.search-field-error {
+    box-shadow: 0px 0px 1rem 0 rgba(226,31,31,.87);
+    &::placeholder {
+        color:#f8aeae;
+        opacity:1
+    }
+}
+.inactive {
+    background: rgba(76,82,85,.7);
+    color: hsla(0,0%,100%,.7);
+    cursor: pointer;
+    &:hover {
+        background-color: #b4b8bb;
+        color: #fff;
+    }
+}
+.disabled {
+    opacity: .5;
+    cursor: auto;
+}
+.disabled, .disabled:hover {
+    background:rgba(76,82,85,.7);
+    color:hsla(0,0%,100%,.7);
+}
+button {
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+}

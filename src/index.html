@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <script src='https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css' rel='stylesheet' />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <title>Fancy Weather</title>
+  </head>
+  <body>
+      <div class="controls">
+        <div class="controls__left-block">
+          <div class="button button_update" id="button_update">
+            <div class="spinner" id="spinner"></div>
+          </div>
+          <div class="language-menu">
+              <button class="button drop-down-menu__face-button" id="drop-down-menu__face-button">
+                <span>en</span>
+                <span class="arrow-down" id="arrow-down"></span>
+              </button>
+              <div class="drop-down-menu" id="drop-down-menu">
+                <button class="drop-down-menu__item button" id="en" data-value="en">en</button>
+                <button class="drop-down-menu__item button inactive" id="ru" data-value="ru">ru</button>
+                <button class="drop-down-menu__item button inactive" id="be" data-value="be">be</button>
+              </div>
+          </div>
+          <div class="units" id="units">
+            <button class="button units__button button_f inactive" data-value="imperial">°F</button>
+            <button class="button units__button button_c" data-value="metric">°C</button>
+          </div>
+        </div>
+        <div class="controls__right-block">
+          <input class="search-input" id="search-input" type="search" name="search-city" required="" placeholder="Search city" spellcheck="false">
+          <button class="button search-input__button" id="search-input__button">Search</button>
+          <button class="search-input__voice-button" id="voice-button" style="display: block;"></button>
+        </div>
+      </div>
+      <div class="loading-indicator hidden" id="loading-indicator"></div>
+      <div class="main-wrapper">
+        <div class="weather" id="weather"></div>
+        <div class="location" id="location"></div>
+      </div>
+      <div class="ticker-wrap" id="ticker-wrap"></div>
+  </body>
+</html>

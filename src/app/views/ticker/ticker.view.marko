@@ -1,0 +1,53 @@
+import I18n from '../../i18n/i18n.class';
+
+<div class="ticker">
+    <div class="ticker__item">${input.city}, ${input.country}: </div>
+    <div class="ticker__item">${Math.round(input.temp)}°</div>
+    <div class="ticker__item">
+        <if(input.lang === 'be')>
+            ${I18n.translate(input.weatherID)}
+        </if>
+        <else>
+            ${input.description}
+        </else>
+    </div>
+    <div class="ticker__item"></div>
+    <div class="ticker__item">${input.feels_likeName}: ${Math.round(input.feels_like)}°</div>
+    <div class="ticker__item"></div>
+    <div class="ticker__item">${input.windName}: ${Math.round(input.wind)} m/s</div>
+    <div class="ticker__item"></div>
+    <div class="ticker__item">${input.humidityName}: ${Math.round(input.humidity)}%</div>
+
+    <div class="ticker__item"></div>
+    <div class="ticker__item"></div>
+    <div class="ticker__item"></div>
+    <div class="ticker__item"></div>
+    <div class="ticker__item">${input.firstDay}: </div>
+    <div class="ticker__item">${Math.round(input.firstDayTemp)}°</div>
+    <div class="ticker__item"></div>
+    <div class="ticker__item">${input.windName}: ${Math.round(input.firstDayWind)} m/s</div>
+    <div class="ticker__item"></div>
+    <div class="ticker__item">${input.humidityName}: ${Math.round(input.firstDayHumidity)}%</div>
+
+    <div class="ticker__item"></div>
+    <div class="ticker__item"></div>
+    <div class="ticker__item"></div>
+    <div class="ticker__item"></div>
+    <div class="ticker__item">${input.secondDay}: </div>
+    <div class="ticker__item">${Math.round(input.secondDayTemp)}°</div>
+    <div class="ticker__item"></div>
+    <div class="ticker__item">${input.windName}: ${Math.round(input.secondDayWind)} m/s</div>
+    <div class="ticker__item"></div>   
+    <div class="ticker__item">${input.humidityName}: ${Math.round(input.secondDayHumidity)}%</div>
+
+    <div class="ticker__item"></div>
+    <div class="ticker__item"></div>
+    <div class="ticker__item"></div>
+    <div class="ticker__item"></div>
+    <div class="ticker__item">${input.thirdDay}: </div>
+    <div class="ticker__item">${Math.round(input.thirdDayTemp)}°</div>
+    <div class="ticker__item"></div>
+    <div class="ticker__item">${input.windName}: ${Math.round(input.secondDayWind)} m/s</div>
+    <div class="ticker__item"></div>
+    <div class="ticker__item">${input.humidityName}: ${Math.round(input.thirdDayHumidity)}%</div>
+</div>
